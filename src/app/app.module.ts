@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { routes } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
@@ -9,7 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CustomersComponent } from './components/customers/customers.component';
-import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
@@ -24,7 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     AppRoutingModule
   ],
   providers: [],
